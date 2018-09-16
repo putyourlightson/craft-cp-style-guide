@@ -10,6 +10,11 @@
       "homepage": "https://putyourlightson.com/"
     }
   ],
+  "support": {
+    "docs": "https://github.com/putyourlightson/cp-style-guide",
+    "source": "https://github.com/putyourlightson/cp-style-guide",
+    "issues": "https://github.com/putyourlightson/cp-style-guide/issues"
+  },
   "require": {
     "craftcms/cms": "^3.0.0"
   },
