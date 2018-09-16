@@ -1,0 +1,25 @@
+{% extends'_layouts/cp' %}
+
+{% set title = 'CP Style Guide'|t('cp-style-guide') %}
+
+{% set tabs = {
+    typography: {label: 'Typography'|t('cp-style-guide'), url: '#typography'},
+    fields: {label: 'Fields'|t('cp-style-guide'), url: '#fields'},
+    tables: {label: 'Tables'|t('cp-style-guide'), url: '#tables'},
+} %}
+
+{% block actionButton %}
+    <a href="https://github.com/putyourlightson/craft-cp-style-guide" class="btn submit add icon" target="_blank">{{ 'Contribute'|t('cp-style-guide') }}</a>
+{% endblock %}
+
+{% block content %}
+    <div id="typography">
+        {% include 'cp-style-guide/_includes/typography' %}
+    </div>
+    <div id="fields" class="hidden">
+        {% include 'cp-style-guide/_includes/fields' %}
+    </div>
+    <div id="tables" class="hidden">
+        {% include 'cp-style-guide/_includes/tables' %}
+    </div>
+{% endblock %}

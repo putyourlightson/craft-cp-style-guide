@@ -1,0 +1,218 @@
+{% import '_includes/forms' as forms %}
+
+<h1>Text Fields</h1>
+
+{{ forms.textField({
+    label: 'Plaintext Field'|t('cp-style-guide'),
+    instructions: 'See `templates/_includes/forms/text.html` for all available options.'|t('cp-style-guide'),
+    placeholder: 'Placeholder text'|t('cp-style-guide'),
+    name: '',
+    value: '',
+    errors: ['This field is required.'|t('cp-style-guide')],
+    required: true,
+    autofocus: true,
+}) }}
+
+{{ forms.textField({
+    label: 'Password Field'|t('cp-style-guide'),
+    instructions: 'See `templates/_includes/forms/text.html` for all available options.'|t('cp-style-guide'),
+    warning: 'Beware of shoulder surfing!'|t('cp-style-guide'),
+    type: 'password',
+    name: '',
+    value: '1234567890',
+}) }}
+
+{{ forms.textareaField({
+    label: 'Textarea Field'|t('cp-style-guide'),
+    instructions: 'See `templates/_includes/forms/textarea.html` for all available options.'|t('cp-style-guide'),
+    name: '',
+    value: '',
+    rows: 3,
+}) }}
+
+<hr/>
+
+<h1>Selection Fields</h1>
+
+{{ forms.lightswitchField({
+    label: 'Lightswitch Field'|t('cp-style-guide'),
+    instructions: 'See `templates/_includes/forms/lightswitch.html` for all available options.'|t('cp-style-guide'),
+    name: '',
+    on: true,
+}) }}
+
+{{ forms.checkboxGroupField({
+    label: 'Checkbox Group Field'|t('cp-style-guide'),
+    instructions: 'See `templates/_includes/forms/checkboxGroup.html` for all available options.'|t('cp-style-guide'),
+    name: '',
+    options: {
+        1: 'A',
+        2: 'B',
+        3: 'C',
+        4: 'D',
+        5: 'E',
+    },
+    values: [1, 3],
+}) }}
+
+{{ forms.radioGroupField({
+    label: 'Radio Group Field'|t('cp-style-guide'),
+    instructions: 'See `templates/_includes/forms/radioGroup.html` for all available options.'|t('cp-style-guide'),
+    name: '',
+    options: {
+        1: 'A',
+        2: 'B',
+        3: 'C',
+        4: 'D',
+        5: 'E',
+    },
+    value: 4,
+}) }}
+
+{{ forms.selectField({
+    label: 'Select Field'|t('cp-style-guide'),
+    instructions: 'See `templates/_includes/forms/select.html` for all available options.'|t('cp-style-guide'),
+    name: '',
+    options: {
+        1: 'A',
+        2: 'B',
+        3: 'C',
+        4: 'D',
+        5: 'E',
+    },
+    value: 2,
+}) }}
+
+{{ forms.multiselectField({
+    label: 'Multi Select Field'|t('cp-style-guide'),
+    instructions: 'See `templates/_includes/forms/multiselect.html` for all available options.'|t('cp-style-guide'),
+    name: '',
+    options: {
+        1: 'A',
+        2: 'B',
+        3: 'C',
+        4: 'D',
+        5: 'E',
+    },
+    values: [2, 5],
+}) }}
+
+{{ forms.colorField({
+    label: 'Color Field'|t('cp-style-guide'),
+    instructions: 'See `templates/_includes/forms/color.html` for all available options.'|t('cp-style-guide'),
+    name: '',
+    value: '#419cf4',
+}) }}
+
+{{ forms.fileField({
+    label: 'File Field'|t('cp-style-guide'),
+    instructions: 'See `templates/_includes/forms/file.html` for all available options.'|t('cp-style-guide'),
+    name: '',
+    value: '',
+}) }}
+
+<hr/>
+
+<h1>Date Fields</h1>
+
+{{ forms.dateField({
+    label: 'Date Field'|t('cp-style-guide'),
+    instructions: 'See `templates/_includes/forms/date.html` for all available options.'|t('cp-style-guide'),
+    name: '',
+    value: now|date,
+}) }}
+
+{{ forms.timeField({
+    label: 'Time Field'|t('cp-style-guide'),
+    instructions: 'See `templates/_includes/forms/time.html` for all available options.'|t('cp-style-guide'),
+    name: '',
+    value: now|date('h:i'),
+}) }}
+
+{{ forms.dateTimeField({
+    label: 'DateTime Field'|t('cp-style-guide'),
+    instructions: 'See `templates/_includes/forms/date.html` for all available options.'|t('cp-style-guide'),
+    name: '',
+    value: now|date('h:i'),
+}) }}
+
+<hr/>
+
+<h1>Element Select Fields</h1>
+
+{{ forms.elementSelectField({
+    label: 'Entry Select Field'|t('cp-style-guide'),
+    instructions: 'See `templates/_includes/forms/elementSelect.html` for all available options.'|t('cp-style-guide'),
+    id: 'entries',
+    name: '',
+    elementType: 'craft\\elements\\Entry',
+    elements: [craft.entries.one()],
+    selectionLabel: 'Add an entry'|t('cp-style-guide'),
+    limit: 5,
+}) }}
+
+{{ forms.elementSelectField({
+    label: 'Asset Select Field'|t('cp-style-guide'),
+    instructions: 'See `templates/_includes/forms/elementSelect.html` for all available options.'|t('cp-style-guide'),
+    id: 'assets',
+    name: '',
+    elementType: 'craft\\elements\\Asset',
+    elements: [craft.assets.one()],
+    selectionLabel: 'Add an asset'|t('cp-style-guide'),
+    limit: 1,
+}) }}
+
+<hr/>
+
+<h1>Table Fields</h1>
+
+{{ forms.editableTableField({
+    label: 'Editable Table Field'|t('cp-style-guide'),
+    instructions: 'See `templates/_includes/forms/editableTable.html` for all available options.'|t('cp-style-guide'),
+    id: 'table',
+    name: '',
+    cols: [
+        {
+            type: 'text',
+            heading: 'Name',
+            info: 'The full name'|t('cp-style-guide'),
+        },
+        {
+            type: 'text',
+            heading: 'Email',
+        },
+    ],
+    rows: [
+        [
+            {
+                value: 'Jack',
+            },
+            {
+                value: 'jack@email.com',
+            },
+        ],
+        [
+            {
+                value: 'Jill',
+            },
+            {
+                value: 'jill@email.com',
+            },
+        ],
+    ],
+    addRowLabel: 'Add a person'|t('cp-style-guide'),
+    minRows: 1,
+    maxRows: 5,
+}) }}
+
+<hr/>
+
+<h1>Custom Fields</h1>
+
+{% set input %}
+    <p>Any markup can go here.</p>
+{% endset %}
+{{ forms.field({
+    label: 'Custom Field'|t('cp-style-guide'),
+    instructions: 'See `templates/_includes/forms/field.html` for all available options.'|t('cp-style-guide'),
+}, input) }}

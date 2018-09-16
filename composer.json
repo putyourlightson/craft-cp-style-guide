@@ -1,0 +1,25 @@
+{
+  "name": "putyourlightson/craft-cp-style-guide",
+  "description": "Control panel style guide.",
+  "version": "1.0.0",
+  "type": "craft-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "PutYourLightsOn",
+      "homepage": "https://putyourlightson.com/"
+    }
+  ],
+  "require": {
+    "craftcms/cms": "^3.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "putyourlightson\\cpstyleguide\\": "src/"
+    }
+  },
+  "extra": {
+    "handle": "cp-style-guide",
+    "name": "CP Style Guide"
+  }
+}
