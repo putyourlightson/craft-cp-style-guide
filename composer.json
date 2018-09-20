@@ -1,7 +1,7 @@
 {
   "name": "putyourlightson/craft-cp-style-guide",
   "description": "Control panel style guide.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "craft-plugin",
   "license": "MIT",
   "authors": [
@@ -11,9 +11,9 @@
     }
   ],
   "support": {
-    "docs": "https://github.com/putyourlightson/cp-style-guide",
-    "source": "https://github.com/putyourlightson/cp-style-guide",
-    "issues": "https://github.com/putyourlightson/cp-style-guide/issues"
+    "docs": "https://github.com/putyourlightson/craft-cp-style-guide",
+    "source": "https://github.com/putyourlightson/craft-cp-style-guide",
+    "issues": "https://github.com/putyourlightson/craft-cp-style-guide/issues"
   },
   "require": {
     "craftcms/cms": "^3.0.0"
