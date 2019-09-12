@@ -6,6 +6,14 @@ The CP Style Guide plugin provides a style guide for control panel pages in [Cra
 
 ![CP Style Guide](docs/images/cp-style-guide-1.0.0.png)
 
+## Documentation
+
+Learn more and read the documentation at [putyourlightson.com/plugins/cp-style-guide »](https://putyourlightson.com/plugins/cp-style-guide)
+
+## License
+
+This plugin is licensed for free under the MIT License.
+
 ## Requirements
 
 Craft CMS 3.0.0 or later.
@@ -15,15 +23,5 @@ Craft CMS 3.0.0 or later.
 To install the plugin, search for "CP Style Guide" in the Craft Plugin Store, or install manually using composer.
 
         composer require putyourlightson/craft-cp-style-guide
-
-## Usage
-
-To view the style guide, install the plugin and click on the CP Style Guide in the main control panel navigation. View the source code in the plugin's template directory to see how to generate the form fields using twig template tags. 
-
-Works well in combination with the [Plugin UXD](https://github.com/putyourlightson/craft-plugin-uxd) plugin.
-
-## Contributing
-
-The style guide is a work in progress. To contribute and help make it more complete, please create a github issue or a pull request.
 
 <small>Created by [PutYourLightsOn](https://putyourlightson.com/).</small>
