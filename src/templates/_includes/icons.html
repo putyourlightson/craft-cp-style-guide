@@ -1,0 +1,117 @@
+{% css %}
+  .column {
+    column-count: 1;
+    column-gap: 10px;
+    -moz-column-count: 1;
+    -moz-column-gap: 10px;
+    -webkit-column-count: 1;
+    -webkit-column-gap: 10px;
+  }
+
+  .inner:nth-child(1) {
+    clear: left;
+  }
+
+  .inner {
+    float: left;
+    margin: 10px;
+    font-size: 10px;
+    width: 55px;
+    height: 50px;
+    border-style: solid;
+  }
+{% endcss %}
+
+{% set options = [
+  { value: 'circledarr' },
+  { value: 'circlelarr' },
+  { value: 'circlerarr' },
+  { value: 'circleuarr' },
+  { value: 'darr' },
+  { value: 'larr' },
+  { value: 'rarr' },
+  { value: 'uarr' },
+  { value: 'asterisk' },
+  { value: 'ban' },
+  { value: 'menu' },
+  { value: 'bell' },
+  { value: 'error' },
+  { value: 'date' },
+  { value: 'category' },
+  { value: 'check' },
+  { value: 'done' },
+  { value: 'enabled' },
+  { value: 'disabled' },
+  { value: 'time' },
+  { value: 'download' },
+  { value: 'upload' },
+  { value: 'settings' },
+  { value: 'language' },
+  { value: 'collapse' },
+  { value: 'gauge' },
+  { value: 'database' },
+  { value: 'downangle' },
+  { value: 'draft' },
+  { value: 'ellipsis' },
+  { value: 'mail' },
+  { value: 'alert' },
+  { value: 'expand' },
+  { value: 'view' },
+  { value: 'field' },
+  { value: 'file' },
+  { value: 'globe' },
+  { value: 'users' },
+  { value: 'home' },
+  { value: 'asset' },
+  { value: 'info' },
+  { value: 'layout' },
+  { value: 'leftangle' },
+  { value: 'lightbulb' },
+  { value: 'list' },
+  { value: 'listrtl' },
+  { value: 'secure' },
+  { value: 'routes' },
+  { value: 'minus' },
+  { value: 'move' },
+  { value: 'newstamp' },
+  { value: 'brush' },
+  { value: 'edit' },
+  { value: 'play' },
+  { value: 'plugin' },
+  { value: 'plus' },
+  { value: 'help' },
+  { value: 'refresh' },
+  { value: 'remove' },
+  { value: 'rightangle' },
+  { value: 'screwdriver' },
+  { value: 'search' },
+  { value: 'section' },
+  { value: 'share' },
+  { value: 'shareleft'},
+  { value: 'general'},
+  { value: 'asc'},
+  { value: 'desc'},
+  { value: 'structure'},
+  { value: 'structurertl'},
+  { value: 'tag'},
+  { value: 'tags'},
+  { value: 'template'},
+  { value: 'grid'},
+  { value: 'gridlarge'},
+  { value: 'trash'},
+  { value: 'insecure'},
+  { value: 'upangle'},
+  { value: 'user'},
+  { value: 'wand'},
+  { value: 'world'},
+  { value: 'tool'},
+] %}
+
+<div class="column">
+  {% for icon in options %}
+    <div class="inner">
+      <span data-icon="{{ icon.value }}" style="font-size: 30px;"></span><br>
+      <span>{{ icon.value }}</span>
+    </div>
+  {% endfor %}
+</div>

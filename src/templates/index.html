@@ -6,6 +6,7 @@
     typography: {label: 'Typography'|t('cp-style-guide'), url: '#typography'},
     fields: {label: 'Fields'|t('cp-style-guide'), url: '#fields'},
     tables: {label: 'Tables'|t('cp-style-guide'), url: '#tables'},
+    icons: {label: 'Icons'|t('cp-style-guide'), url: '#icons'},
 } %}
 
 {% block actionButton %}
@@ -21,5 +22,8 @@
     </div>
     <div id="tables" class="hidden">
         {% include 'cp-style-guide/_includes/tables' %}
+    </div>
+    <div id="icons" class="hidden">
+        {% include 'cp-style-guide/_includes/icons' %}
     </div>
 {% endblock %}
